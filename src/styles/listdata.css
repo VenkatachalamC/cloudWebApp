@@ -1,0 +1,55 @@
+.list{
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 700px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex:2;
+    box-shadow:10px 5px 12px 10px lightblue;
+    border-radius: 3%;
+}
+
+.img{
+    height: 200px;
+    width: 350px;
+    border-radius:50px;
+    margin: 20px;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.download-btn{
+    margin: 10px;
+    background-color: green;
+    color:aliceblue;
+    border:none;
+    height: 30px;
+    cursor: pointer;
+}
+.delete-btn{
+    margin: 10px;
+    background-color: red;
+    color:aliceblue;
+    border:none;
+    height: 30px;
+    cursor:pointer;
+}
+
+.list p{
+    font-size: larger;
+    margin-top: 30px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.clickable-container{
+    display: flex;
+    flex-direction: row;
+}

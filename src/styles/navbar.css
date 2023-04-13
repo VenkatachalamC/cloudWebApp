@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-direction: row;
+    background-color: purple;
+    position:fixed;
+    width: 100%;
+    margin: 0px;
+    top:0;
+}
+
+.items{
+    background-color: purple;
+    margin: 20px;
+    padding: 10px;
+    color:azure;
+    border: none;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+}
