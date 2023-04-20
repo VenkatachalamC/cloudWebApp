@@ -6,6 +6,9 @@
     height: 100%;
     width: 100%;
 }
+.container h1 {
+    text-shadow:0 0 10px #0ef;
+}
 .button-container{
     flex-direction: row;
     align-items: center;
@@ -13,12 +16,36 @@
     padding: 30px;
 }
 .downloadbutton{
-    margin: 20px;
-    border-radius: 10%;
+    /* margin: 20px;
+    border-radius: 20px; */
+    margin: 10px;
+    background-color: green;
+    /* border: 1px solid green; */
+    /* background-color: black; */
+    color:aliceblue;
+    border:none;
+    height: 30px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
 }
 .renamebutton{
-    margin: 20px;
-    border-radius: 10%;
+    margin: 10px;
+    background-color: red;
+    /* border: 1px solid red; */
+    color:aliceblue;
+    border:none;
+    height: 30px;
+    cursor:pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+.downloadbutton:hover{
+    opacity: 0.7;
+}
+.renamebutton:hover{
+    opacity: 0.7;
 }
 
 .filename{
@@ -28,4 +55,9 @@
 .element{
     height: 300px;
     width: 500px;
+}
+
+.thumbnail {
+    width: 30em;
+    padding: 30px;
 }

@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 30px;
 }
 .input{
     height: 30px;
@@ -24,15 +25,39 @@
 }
 
 .rename-button{
+    color: white;
     height: 30px;
     width:75px;
     margin: 0px 30px 0px 30px;
+    background-color: green;
+    border:none;
+    height: 30px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .cancel-button{
     height: 30px;
     width:75px;
     margin: 0px 30px 0px 30px;
+    margin: 10px;
+    background-color: red;
+    /* border: 1px solid red; */
+    color:aliceblue;
+    border:none;
+    height: 30px;
+    cursor:pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.rename-button:hover {
+    opacity: 0.7;
+}
+.cancel-button:hover {
+    opacity: 0.7;
 }
 
 .modal-buttons{

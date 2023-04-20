@@ -19,6 +19,12 @@
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
+    border-radius: 20px;
+    background-color: blue;
+    transition: 0.3s;
+}
+.custom-file-upload:hover {
+    opacity: 0.7;
 }
 
 .upload-btn{

@@ -7,8 +7,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex:2;
-    box-shadow:10px 5px 12px 10px lightblue;
-    border-radius: 3%;
+    /* box-shadow:10px 5px 12px 10px cyan; */
+    box-shadow: 0 0 20px cyan;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.list p{
+    text-shadow: 0 0 20px cyan;
 }
 
 .img{
@@ -26,18 +31,33 @@
 .download-btn{
     margin: 10px;
     background-color: green;
+    /* border: 1px solid green; */
+    /* background-color: black; */
     color:aliceblue;
     border:none;
     height: 30px;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
 }
 .delete-btn{
     margin: 10px;
     background-color: red;
+    /* border: 1px solid red; */
     color:aliceblue;
     border:none;
     height: 30px;
     cursor:pointer;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+.download-btn:hover{
+    opacity: 0.7;
+    background-color: green;
+}
+.delete-btn:hover{
+    opacity:0.7;
+    background-color: red;
 }
 
 .list p{
@@ -52,4 +72,5 @@
 .clickable-container{
     display: flex;
     flex-direction: row;
+    /* border-radius: 30px; */
 }

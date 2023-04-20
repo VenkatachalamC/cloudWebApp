@@ -22,16 +22,21 @@ const Upload=()=>{
         setdoc(null)
     }
     return(
+        <>
+            <NavBar/>
         <div className="upload">
-        <NavBar/>
+        <br></br>
+        <br></br>
+        <br></br>
         <div className="divider"></div>
         <label className="custom-file-upload">
         <input className="fileinput" type="file" onChange={fileselect}/>
-        <p>select file</p>
+        <p>Select File to Upload</p>
         </label>
         {doc && <p>{doc.name}</p>}
         {doc && <button className="upload-btn"onClick={uploadHandler}>upload</button>}
         </div>
+        </>
 
     );
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import '../styles/viewdata.css';
 import Modal from "./modal";
+import NavBar from "./Navbar";
 const ViewData = () => {
     const location = useLocation();
     const url = location.state.url;
@@ -11,8 +12,8 @@ const ViewData = () => {
     const [modal, setmodal] = useState(false)
     var ele;
     switch (type) {
-        case 'application': ele = <img src={require('../images/doc.png')} />; break;
-        case 'image': ele = <img src={url} />; break;
+        case 'application': ele = <img className="thumbnail" src={require('../images/doc.png')} />; break;
+        case 'image': ele = <img className="thumbnail" src={url} />; break;
         case 'video': ele = <video controls><source src={url} type="video/mp4" /></video>; break;
     }
     function download(filename) {
@@ -28,15 +29,24 @@ const ViewData = () => {
             })
     }
     return (
+        <>
+        <NavBar />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
         <div className="container">
+        
             <h1>{filename}</h1>
             {ele}
             <div className="button-container">
-                <button className="downloadbutton" onClick={() => { download(filename) }}>download</button>
+                <button className="downloadbutton" onClick={() => { download(filename) }}>Download</button>
                 <button className="renamebutton" onClick={() => setmodal(true)}>Rename</button>
             </div>
             {modal && <Modal setmodal={setmodal} name={filename} setfilename={setfilename} />}
         </div>
+        </>
     )
 }
 export default ViewData;
