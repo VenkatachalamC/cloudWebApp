@@ -26,8 +26,8 @@ function Modal({ setmodal, name, setfilename }) {
             <div className='components'>
                 <input className='input' value={rename} onChange={(e) => setrename(e.target.value)} />
                 <div className='modal-buttons'>
-                    <button onClick={renameHandle} className='rename-button'>rename</button>
-                    <button onClick={() => setmodal(false)} className='cancel-button'>cancel</button>
+                    <button onClick={renameHandle} className='rename-button'>Rename</button>
+                    <button onClick={() => setmodal(false)} className='cancel-button'>Cancel</button>
                 </div>
             </div>
         </div>

@@ -69,8 +69,8 @@ const List = () => {
                     <p>{item.fileName}</p>
                 </div>
                 <div className="buttonContainer">
-                    <button onClick={() => DownloadHandle(item.fileName)} className="download-btn">download</button>
-                    <button onClick={() => { DeleteHandle(item.fileName, item._id) }} className="delete-btn">delete</button>
+                    <button onClick={() => DownloadHandle(item.fileName)} className="download-btn">Download</button>
+                    <button onClick={() => { DeleteHandle(item.fileName, item._id) }} className="delete-btn">Delete</button>
                 </div>
             </div>
         )
