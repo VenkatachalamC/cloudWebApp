@@ -8,7 +8,7 @@ const List = () => {
     const userid = localStorage.getItem("userid");
     const navigation = useNavigate();
     const fetchData = () => {
-        fetch(`http://192.168.1.7:5000/documents/${userid}`)
+        fetch(`http://localhost:5000/documents/${userid}`)
             .then(res => res.json())
             .then(data => { setfiles(data); })
     }
@@ -16,7 +16,7 @@ const List = () => {
         fetchData();
     }, [userid])
     function DeleteHandle(name, id) {
-        fetch("http://192.168.1.7:5000/Delete", {
+        fetch("http://localhost:5000/Delete", {
             method: "DELETE",
             body: JSON.stringify({
                 name: name,
@@ -31,7 +31,7 @@ const List = () => {
         setfiles(f);
     }
     const DownloadHandle = (name) => {
-        fetch(`http://192.168.1.7:5000/${name}`).then(res => res.blob()).then(
+        fetch(`http://localhost:5000/${name}`).then(res => res.blob()).then(
             blob => {
                 const bloburl = window.URL.createObjectURL(new Blob([blob]))
                 var atag = document.createElement('a');
@@ -45,7 +45,7 @@ const List = () => {
 
     }
     const renderItem = (item) => {
-        const url = `http://192.168.1.7:5000/${item.fileName}`
+        const url = `http://localhost:5000/${item.fileName}`
         const myArray = item.filetype.split("/");
         var fname;
         const showDocument = (filename) => {
