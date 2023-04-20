@@ -13,7 +13,7 @@ const Upload=()=>{
         const fd=new FormData()
         fd.append("file",doc)
         fd.append("userid",userid)
-        fetch("http://192.168.1.7:5000/upload",{
+        fetch("http://localhost:5000/upload",{
             method:"POST",
             body:fd,
             headers:{

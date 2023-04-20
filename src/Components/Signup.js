@@ -15,7 +15,7 @@ const SignUp=()=>{
             return;
         }
         const hash=sha256(pass);
-        fetch("http://192.168.1.7:5000/signup",{
+        fetch("http://localhost:5000/signup",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
