@@ -12,7 +12,7 @@ const SignIn=()=>{
     const signIn=()=>{
          const hash=sha256(pass)
          console.log(hash.toString())
-            fetch("http://localhost:5000/SignIn",{
+            fetch("https://cloudserver-2iuc.onrender.com/SignIn",{
                 method:"POST",
                 headers:{
                     "content-Type":"application/json"

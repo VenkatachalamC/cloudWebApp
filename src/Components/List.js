@@ -8,7 +8,7 @@ const List = () => {
     const userid = localStorage.getItem("userid");
     const navigation = useNavigate();
     const fetchData = () => {
-        fetch(`http://localhost:5000/documents/${userid}`)
+        fetch(`https://cloudserver-2iuc.onrender.com/documents/${userid}`)
             .then(res => res.json())
             .then(data => { setfiles(data); })
     }
@@ -16,7 +16,7 @@ const List = () => {
         fetchData();
     }, [userid, files])
     function DeleteHandle(name, id) {
-        fetch("http://localhost:5000/Delete", {
+        fetch("https://cloudserver-2iuc.onrender.com/Delete", {
             method: "DELETE",
             body: JSON.stringify({
                 name: name,
@@ -31,7 +31,7 @@ const List = () => {
         setfiles(f);
     }
     const DownloadHandle = (name) => {
-        fetch(`http://localhost:5000/${name}`).then(res => res.blob()).then(
+        fetch(`https://cloudserver-2iuc.onrender.com/${name}`).then(res => res.blob()).then(
             blob => {
                 const bloburl = window.URL.createObjectURL(new Blob([blob]))
                 var atag = document.createElement('a');
@@ -45,7 +45,7 @@ const List = () => {
 
     }
     const renderItem = (item) => {
-        const url = `http://localhost:5000/${item.fileName}`
+        const url = `https://cloudserver-2iuc.onrender.com/${item.fileName}`
         const myArray = item.filetype.split("/");
         var fname;
         const showDocument = (filename) => {
