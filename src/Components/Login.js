@@ -58,15 +58,15 @@ const SignIn=()=>{
                         value={name} onChange={(e)=>setname(e.target.value)} required></input>
                         <label>Username</label>
                     </div>
-                    <div class="input-group">
+                    <div className="input-group">
                         <input value={pass} type="password" onChange={(e)=>setpass(e.target.value)}
                         required></input>
                         <label for="">Password</label>
                     </div>
                     <button onClick={signIn}>Login</button>
-                    <div class="signUp-link">
+                    <div className="signUp-link">
                         <p>Not a user? <a href="/signup"
-                             class="signUpBtn-link">Sign Up</a></p>
+                             className="signUpBtn-link">Sign Up</a></p>
                     </div>
                 </div>
             </div>

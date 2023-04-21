@@ -22,7 +22,13 @@
     border-radius:50px;
     margin: 20px;
 }
-
+.imgdoc {
+    height: 300px;
+    width: 350px;
+    border-radius: 50px;
+    /* margin: 10px; */
+    padding: 30px;
+}
 .buttonContainer{
     display: flex;
     flex-direction: column;
@@ -60,15 +66,35 @@
     background-color: red;
 }
 
-.list p{
+/* .list .fileNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 10px;
+} */
+.list .fileName{
     font-size: larger;
     margin-top: 30px;
+    width: 190px;
+    align-items: center;
+    justify-content: center;
 }
 .container{
     display: flex;
     flex-direction: column;
 }
 
+.container .noFiles{
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+.container .noFilesh1 {
+    color: white;
+    padding: 10px;
+}
 .clickable-container{
     display: flex;
     flex-direction: row;

@@ -14,7 +14,7 @@ const List = () => {
     }
     useEffect(() => {
         fetchData();
-    }, [userid])
+    }, [userid, files])
     function DeleteHandle(name, id) {
         fetch("http://localhost:5000/Delete", {
             method: "DELETE",
@@ -60,13 +60,14 @@ const List = () => {
         switch (myArray[0]) {
             case "image": fname = <img className="img" src={url} alt="" />; break;
             case "video": fname = <video className="img" controls muted><source src={url} type={item.filetype} /></video>; break;
-            case "application": fname = <img className="img" src={doc} alt="" />; break;
+            case "application": fname = <img className="imgdoc" src={doc} alt="" />; break;
         }
         return (
             <div key={item._id} className="list" >
                 <div onClick={() => showDocument(item.fileName)} className="clickable-container">
                     {fname}
-                    <p>{item.fileName}</p>
+                    <div className="fileNameContainer"><p className="fileName">{item.fileName}</p></div>
+                    
                 </div>
                 <div className="buttonContainer">
                     <button onClick={() => DownloadHandle(item.fileName)} className="download-btn">Download</button>
@@ -80,7 +81,9 @@ const List = () => {
         <div className="container">
             <div style={{ height: "100px" }}></div>
             <NavBar />
-            {files.map(renderItem)}
+            {/* {files.map(renderItem)} */}
+            
+            {files.length === 0 ? <><img src='forbidden.png' className="noFiles" /><h1 className="noFilesh1">No Files were uploaded 😶</h1></>: files.map(renderItem)}
         </div>
     )
 }
