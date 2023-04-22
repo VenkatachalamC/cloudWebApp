@@ -31,7 +31,7 @@ const LoginCont = () => {
             <h2>Contact Details</h2>
                 <div>
                     <p>Jai Vidyasagar R - +91 95004 42237 - <a href="mailto:jaividyasagarr@gmail.com">jaividyasagarr@gmail.com</a> <br></br></p>
-                    <p>Venkatachalam C - +91 74492 40301 - <a href="mailto:223003107@sastra.ac.in">jaividyasagarr@gmail.com</a> <br></br></p>
+                    <p>Venkatachalam C - +91 74492 40301 - <a href="mailto:venkatachalam17092001@gmail.com">venkatachalam17092001@gmail.com</a> <br></br></p>
                     <p>Harish Adhitya S - +91 83005 49300 - <a href="mailto:223003040@sastra.ac.in">harishadhitya@gmail.com</a> <br></br></p>
                 </div>
                 
