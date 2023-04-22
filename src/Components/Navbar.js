@@ -15,7 +15,7 @@ const NavBar = () => {
                     <li><a href="#">Home</a></li>
                     <li><a onClick={() => navigation('/list')} className="items">Files</a></li>
                     <li><a onClick={() => navigation('/upload')} className="items">Upload</a></li>
-                    <li><a href="https://drive.google.com/file/d/1sIbZDMOy5FZnVg1KJADEpi-P4bN3Gn5x/view?usp=sharing" target="_blank" className="items">Download App</a></li>
+                    <li><a href="/download-apk" className="items">Download App</a></li>
                     <li><a onClick={logoutHandler} className="items">Logout</a></li>
                 </ul>
 
