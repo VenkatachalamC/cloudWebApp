@@ -266,6 +266,11 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.iframe{
+    box-shadow: 0 0 40px #0ef;
+    width: fit-content;
+}
+
 @media (max-width:768px) {
     * {
         /* background-color: yellow; */

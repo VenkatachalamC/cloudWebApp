@@ -12,7 +12,7 @@ const NavBar = () => {
             <nav className='nav'>
                 <span>Cloud Storage</span>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/list#">Home</a></li>
                     <li><a onClick={() => navigation('/list')} className="items">Files</a></li>
                     <li><a onClick={() => navigation('/upload')} className="items">Upload</a></li>
                     <li><a href="/download-apk" className="items">Download App</a></li>

@@ -37,3 +37,12 @@
 .link:hover {
     opacity: 0.7;
 }
+.iframe{
+    box-shadow: 0 0 40px #0ef;
+    width: fit-content;
+    margin-top: 30px;
+    height: fit-content;
+}
+.divider{
+ margin: 50px;   
+}

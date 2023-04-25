@@ -25,7 +25,9 @@ const LoginCont = () => {
                     6. Now you will see the uploaded files in the home section<br></br>
                     7. You can download or delete the particular file whenever you want.<br></br>
                 </p>
-                <iframe className='ytapk' width="560" height="315" src="https://www.youtube.com/embed/QaCfOatTIDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div className='iframe'>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/usMV0TpFJ4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
             <div id="contactLine"></div>
             <div class="contact-container">

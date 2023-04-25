@@ -34,7 +34,7 @@ const Upload = () => {
                     <p>Select File to Upload</p>
                 </label>
                 {doc && <p>{doc.name}</p>}
-                {doc && <button className="upload-btn" onClick={uploadHandler}>upload</button>}
+                {doc && <button className="upload-btn" onClick={uploadHandler}>Upload</button>}
             </div>
         </>
 
