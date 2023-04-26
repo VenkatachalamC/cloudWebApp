@@ -16,6 +16,8 @@ const NavBar = () => {
                     <li><a onClick={() => navigation('/list')} className="items">Files</a></li>
                     <li><a onClick={() => navigation('/upload')} className="items">Upload</a></li>
                     <li><a href="/download-apk" className="items">Download App</a></li>
+                    <li><a href="/bin" className="items">Bin</a></li>
+                    <li><a className="items" href="/deactivate">Deactivate Account</a></li>
                     <li><a onClick={logoutHandler} className="items">Logout</a></li>
                 </ul>
 

@@ -16,7 +16,7 @@ const SignUp = () => {
             return;
         }
         const hash = sha256(pass);
-        fetch("https://cloudserver-2iuc.onrender.com/signup", {
+        fetch("http://localhost:5000/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

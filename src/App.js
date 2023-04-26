@@ -7,6 +7,8 @@ import Upload from './Components/Upload';
 import List from './Components/List';
 import ViewData from './Components/viewData';
 import Apk from './Components/Apk';
+import Bin from './Components/bin';
+import Deactivate from './Components/deactivate';
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,8 @@ function App() {
     <Route path="/list" element={<List/>}/>
     <Route path="/view" element={<ViewData/>}/>
     <Route path='/download-apk' element={<Apk />} />
+    <Route path="/bin" element={<Bin/>}/>
+    <Route path="/deactivate" element={<Deactivate/>}/>
     </Routes>
     </BrowserRouter>
   );

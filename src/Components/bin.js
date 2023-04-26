@@ -3,20 +3,21 @@ import NavBar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import doc from '../images/doc.png'
 import '../styles/listdata.css'
-const List = () => {
-    const [files, setfiles] = useState([])
+
+const Bin=()=>{
+    const [binfiles, setbinfiles] = useState([])
     const userid = localStorage.getItem("userid");
     const navigation = useNavigate();
     const fetchData = () => {
-        fetch(`http://localhost:5000/documents/${userid}`)
+        fetch(`http://localhost:5000/getbin/${userid}`)
             .then(res => res.json())
-            .then(data => { setfiles(data); })
+            .then(data => { setbinfiles(data); })
     }
     useEffect(() => {
         fetchData();
-    }, [userid, files])
+    }, [userid, binfiles])
     function DeleteHandle(name, id) {
-        fetch("http://localhost:5000/Delete", {
+        fetch("http://localhost:5000/permanentdelete", {
             method: "DELETE",
             body: JSON.stringify({
                 name: name,
@@ -27,21 +28,21 @@ const List = () => {
             }
         }).then(res => res.json())
             .then(data => { })
-        const f = files.filter((item) => item._id !== id && item.name !== name)
-        setfiles(f);
+        const f = binfiles.filter((item) => item._id !== id && item.name !== name)
+        setbinfiles(f);
     }
-    const DownloadHandle = (name) => {
-        fetch(`http://localhost:5000/${name}`).then(res => res.blob()).then(
-            blob => {
-                const bloburl = window.URL.createObjectURL(new Blob([blob]))
-                var atag = document.createElement('a');
-                atag.setAttribute("href", bloburl)
-                atag.setAttribute("download", name);
-                document.body.appendChild(atag);
-                atag.click();
-                atag.remove()
-            }
-        )
+    const RestoreHandle = (name) => {
+        fetch('http://localhost:5000/restore',{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                uid:userid,
+                fname:name
+            })
+        }).then(res=>res.json())
+        .then(data=>{})
 
     }
     const renderItem = (item) => {
@@ -70,7 +71,7 @@ const List = () => {
                     
                 </div>
                 <div className="buttonContainer">
-                    <button onClick={() => DownloadHandle(item.fileName)} className="download-btn">Download</button>
+                    <button onClick={() => RestoreHandle(item.fileName)} className="download-btn">Restore</button>
                     <button onClick={() => { DeleteHandle(item.fileName, item._id) }} className="delete-btn">Delete</button>
                 </div>
             </div>
@@ -81,10 +82,8 @@ const List = () => {
         <div className="container">
             <div style={{ height: "100px" }}></div>
             <NavBar />
-            {/* {files.map(renderItem)} */}
-            
-            {files.length === 0 ? <><img src='forbidden.png' className="noFiles" /><h1 className="noFilesh1">No Files were uploaded 😶</h1></>: files.map(renderItem)}
+            {binfiles.length === 0 ? <><img src='forbidden.png' className="noFiles" /><h1 className="noFilesh1">Bin is empty 🗑️</h1></>: binfiles.map(renderItem)}
         </div>
     )
 }
-export default List;
+export default Bin;
