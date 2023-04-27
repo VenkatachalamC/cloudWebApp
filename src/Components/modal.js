@@ -4,7 +4,7 @@ function Modal({ setmodal, name, setfilename }) {
     const [rename, setrename] = useState(name);
     const userid = localStorage.getItem('userid');
     const renameHandle = () => {
-        fetch('http://localhost:5000/rename', {
+        fetch('https://cloudserver-2iuc.onrender.com/rename', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ const Bin=()=>{
     const userid = localStorage.getItem("userid");
     const navigation = useNavigate();
     const fetchData = () => {
-        fetch(`http://localhost:5000/getbin/${userid}`)
+        fetch(`https://cloudserver-2iuc.onrender.com/getbin/${userid}`)
             .then(res => res.json())
             .then(data => { setbinfiles(data); })
     }
@@ -17,7 +17,7 @@ const Bin=()=>{
         fetchData();
     }, [userid, binfiles])
     function DeleteHandle(name, id) {
-        fetch("http://localhost:5000/permanentdelete", {
+        fetch("https://cloudserver-2iuc.onrender.com/permanentdelete", {
             method: "DELETE",
             body: JSON.stringify({
                 name: name,
@@ -32,7 +32,7 @@ const Bin=()=>{
         setbinfiles(f);
     }
     const RestoreHandle = (name) => {
-        fetch('http://localhost:5000/restore',{
+        fetch('https://cloudserver-2iuc.onrender.com/restore',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -46,7 +46,7 @@ const Bin=()=>{
 
     }
     const renderItem = (item) => {
-        const url = `http://localhost:5000/${item.fileName}`
+        const url = `https://cloudserver-2iuc.onrender.com/${item.fileName}`
         const myArray = item.filetype.split("/");
         var fname;
         const showDocument = (filename) => {

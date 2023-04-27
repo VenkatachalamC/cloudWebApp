@@ -5,7 +5,7 @@ const Deactivate=()=>{
     const userid=localStorage.getItem("userid");
 
     const deactivate=()=>{
-        fetch("http://localhost:5000/deactivate",{
+        fetch("https://cloudserver-2iuc.onrender.com/deactivate",{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json"

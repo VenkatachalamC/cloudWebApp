@@ -15,7 +15,7 @@ const Upload = () => {
         fd.append("file", doc)
         fd.append("userid", userid)
         setloading(true)
-        fetch("http://localhost:5000/upload", {
+        fetch("https://cloudserver-2iuc.onrender.com/upload", {
             method: "POST",
             body: fd,
             headers: {
