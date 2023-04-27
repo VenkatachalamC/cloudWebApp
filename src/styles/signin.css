@@ -4,6 +4,9 @@ body {
     background-color: black;
     color: white;
     font-family: 'Poppins', sans-serif;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    background-attachment: fixed;
+
 }
 
 .card{

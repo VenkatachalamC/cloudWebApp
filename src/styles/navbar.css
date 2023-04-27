@@ -10,6 +10,20 @@
     top:0;
 } 
 
+#deact-btn {
+    border: 2px solid black;
+    transition: 0.2s;
+}
+
+#deact-btn:hover{
+    border-radius: 10px;
+    background-color: red;
+    border: 2px solid red;
+    border-bottom: none;
+    box-shadow: 0 0 10px red;
+    color: white;
+
+}
 /* .items{
     background-color: purple;
     margin: 20px;

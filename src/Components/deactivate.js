@@ -26,11 +26,17 @@ const Deactivate=()=>{
     return(
         <div className='megacontainer'>
         <div className="container">
+            <img src='https://i.gifer.com/8iE9.gif' />
+            <h3>Warning!</h3>
             <h3 className="heading">Account Deactivation</h3>
-            <p className="content">Deactivating Account will delete your Account permanently and also the files linked to your Account.Are you sure you want to deactivate?</p>
+            <div className='messg'>
+            <p className="content">Deactivating Account will delete your Account permanently and also the files linked to your Account.</p>
+            <p className='content'>Are you sure you want to deactivate?</p>
+            </div>
+            
             <div className="button-grp">
                 <button className="deactivate-btn" onClick={deactivate}>Deactivate</button>
-                <button className="cancel-btn" onClick={()=>navigate("/list")}>cancel</button>
+                <button className="cancel-btn" onClick={()=>navigate("/list")}>Cancel</button>
             </div>
         </div>
         </div>
