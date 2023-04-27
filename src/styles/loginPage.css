@@ -105,6 +105,10 @@ span {
     color: black;
 }
 
+#home-container h3 {
+    text-shadow: 0 0 10px #0ef;
+}
+
 * {
     margin: 0;
     padding: 0;

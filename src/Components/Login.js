@@ -42,7 +42,7 @@ const SignIn=()=>{
         
         <center>
         <div id='home-container'>
-            <h1>Implementation Storage as a Service (STaaS) Using Cloud Network Attached Storage (NAS)</h1>
+            <h1>Implementation Of Storage as a Service (STaaS) Using Cloud Network Attached Storage (NAS)</h1>
             <h3>It's a Cloud-based storage service platform for your usage, If you're consumer looking for cloud storage, Click on Get Started!</h3>
             <a href="#midLine"><button>Get Started! </button></a>
             <br></br><br></br><br></br><br></br>
